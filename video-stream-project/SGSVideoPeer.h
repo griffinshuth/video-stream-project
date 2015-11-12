@@ -9,13 +9,13 @@
 #import <Foundation/Foundation.h>
 #import <MultipeerConnectivity/MultipeerConnectivity.h>
 
-@protocol SGSVideoPeerDelegate <NSObject>
+@protocol VideoPeerDelegate <NSObject>
 - (void) showImage:(UIImage*) image atIndexPath:(NSIndexPath*) indexPath;
 - (void) raiseFramerateForPeer:(MCPeerID*) peerID;
 - (void) lowerFramerateForPeer:(MCPeerID*) peerID;
 @end
 
-@interface SGSVideoPeer : NSObject
+@interface VideoPeer : NSObject
 
 @property (strong, nonatomic) id delegate;
 @property BOOL useAutoFramerate;

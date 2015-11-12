@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SGSViewController : UIViewController
+@interface VideoViewController : UIViewController
 
 @end

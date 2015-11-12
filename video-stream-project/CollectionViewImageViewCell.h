@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SGSImageViewCell : UICollectionViewCell
+@interface CollectionViewImageViewCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end

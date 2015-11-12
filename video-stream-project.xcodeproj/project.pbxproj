@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		218BD24256A442804A9B8451 /* libPods-video-stream-project.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A47D6F52D663AED9073AC001 /* libPods-video-stream-project.a */; };
 		96B090911BF3B51D00CE8AC1 /* VideoCaptureSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B090901BF3B51D00CE8AC1 /* VideoCaptureSubclass.m */; };
-		96B0909F1BF3DB2F00CE8AC1 /* SGSVideoPeer.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B090971BF3DB2F00CE8AC1 /* SGSVideoPeer.m */; };
-		96B090A01BF3DB2F00CE8AC1 /* SGSImageViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B090991BF3DB2F00CE8AC1 /* SGSImageViewCell.m */; };
-		96B090A31BF3DB2F00CE8AC1 /* SGSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B0909E1BF3DB2F00CE8AC1 /* SGSViewController.m */; };
+		96B0909F1BF3DB2F00CE8AC1 /* VideoPeer.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B090971BF3DB2F00CE8AC1 /* VideoPeer.m */; };
+		96B090A01BF3DB2F00CE8AC1 /* CollectionViewImageViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B090991BF3DB2F00CE8AC1 /* CollectionViewImageViewCell.m */; };
+		96B090A31BF3DB2F00CE8AC1 /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B0909E1BF3DB2F00CE8AC1 /* VideoViewController.m */; };
 		96E7A3EE1BF294AE00B7482B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E7A3ED1BF294AE00B7482B /* main.m */; };
 		96E7A3F11BF294AE00B7482B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E7A3F01BF294AE00B7482B /* AppDelegate.m */; };
 		96E7A3F41BF294AE00B7482B /* StreamStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E7A3F31BF294AE00B7482B /* StreamStartViewController.m */; };
@@ -44,12 +44,12 @@
 		104CE169AA872DB927FD7FD7 /* Pods-video-stream-project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-video-stream-project.debug.xcconfig"; path = "Pods/Target Support Files/Pods-video-stream-project/Pods-video-stream-project.debug.xcconfig"; sourceTree = "<group>"; };
 		96B0908F1BF3B51D00CE8AC1 /* VideoCaptureSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoCaptureSubclass.h; sourceTree = "<group>"; };
 		96B090901BF3B51D00CE8AC1 /* VideoCaptureSubclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoCaptureSubclass.m; sourceTree = "<group>"; };
-		96B090961BF3DB2F00CE8AC1 /* SGSVideoPeer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGSVideoPeer.h; sourceTree = "<group>"; };
-		96B090971BF3DB2F00CE8AC1 /* SGSVideoPeer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGSVideoPeer.m; sourceTree = "<group>"; };
-		96B090981BF3DB2F00CE8AC1 /* SGSImageViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGSImageViewCell.h; sourceTree = "<group>"; };
-		96B090991BF3DB2F00CE8AC1 /* SGSImageViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGSImageViewCell.m; sourceTree = "<group>"; };
-		96B0909D1BF3DB2F00CE8AC1 /* SGSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGSViewController.h; sourceTree = "<group>"; };
-		96B0909E1BF3DB2F00CE8AC1 /* SGSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGSViewController.m; sourceTree = "<group>"; };
+		96B090961BF3DB2F00CE8AC1 /* VideoPeer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPeer.h; sourceTree = "<group>"; };
+		96B090971BF3DB2F00CE8AC1 /* VideoPeer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPeer.m; sourceTree = "<group>"; };
+		96B090981BF3DB2F00CE8AC1 /* CollectionViewImageViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewImageViewCell.h; sourceTree = "<group>"; };
+		96B090991BF3DB2F00CE8AC1 /* CollectionViewImageViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewImageViewCell.m; sourceTree = "<group>"; };
+		96B0909D1BF3DB2F00CE8AC1 /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
+		96B0909E1BF3DB2F00CE8AC1 /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
 		96E7A3E91BF294AE00B7482B /* video-stream-project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "video-stream-project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E7A3ED1BF294AE00B7482B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		96E7A3EF1BF294AE00B7482B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -115,12 +115,12 @@
 		96B090951BF3DB0700CE8AC1 /* player-files */ = {
 			isa = PBXGroup;
 			children = (
-				96B090961BF3DB2F00CE8AC1 /* SGSVideoPeer.h */,
-				96B090971BF3DB2F00CE8AC1 /* SGSVideoPeer.m */,
-				96B090981BF3DB2F00CE8AC1 /* SGSImageViewCell.h */,
-				96B090991BF3DB2F00CE8AC1 /* SGSImageViewCell.m */,
-				96B0909D1BF3DB2F00CE8AC1 /* SGSViewController.h */,
-				96B0909E1BF3DB2F00CE8AC1 /* SGSViewController.m */,
+				96B090961BF3DB2F00CE8AC1 /* VideoPeer.h */,
+				96B090971BF3DB2F00CE8AC1 /* VideoPeer.m */,
+				96B090981BF3DB2F00CE8AC1 /* CollectionViewImageViewCell.h */,
+				96B090991BF3DB2F00CE8AC1 /* CollectionViewImageViewCell.m */,
+				96B0909D1BF3DB2F00CE8AC1 /* VideoViewController.h */,
+				96B0909E1BF3DB2F00CE8AC1 /* VideoViewController.m */,
 			);
 			name = "player-files";
 			sourceTree = "<group>";
@@ -377,12 +377,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				96E7A3F41BF294AE00B7482B /* StreamStartViewController.m in Sources */,
-				96B090A31BF3DB2F00CE8AC1 /* SGSViewController.m in Sources */,
+				96B090A31BF3DB2F00CE8AC1 /* VideoViewController.m in Sources */,
 				96B090911BF3B51D00CE8AC1 /* VideoCaptureSubclass.m in Sources */,
 				96E7A3F11BF294AE00B7482B /* AppDelegate.m in Sources */,
 				96E7A3EE1BF294AE00B7482B /* main.m in Sources */,
-				96B090A01BF3DB2F00CE8AC1 /* SGSImageViewCell.m in Sources */,
-				96B0909F1BF3DB2F00CE8AC1 /* SGSVideoPeer.m in Sources */,
+				96B090A01BF3DB2F00CE8AC1 /* CollectionViewImageViewCell.m in Sources */,
+				96B0909F1BF3DB2F00CE8AC1 /* VideoPeer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

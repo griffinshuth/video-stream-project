@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Say Goodnight Software. All rights reserved.
 //
 
-#import "SGSVideoPeer.h"
+#import "VideoPeer.h"
 
-@interface SGSVideoPeer () {
+@interface VideoPeer () {
     MCPeerID* _peerID;
     BOOL _isPlaying;
     NSMutableArray* _frames;
@@ -23,7 +23,7 @@
 
 @end
 
-@implementation SGSVideoPeer
+@implementation VideoPeer
 
 - (instancetype) initWithPeer:(MCPeerID*) peerID atIndexPath:(NSIndexPath*) indexPath {
     self = [super init];

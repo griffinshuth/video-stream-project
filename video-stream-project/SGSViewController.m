@@ -6,14 +6,14 @@
 //  Copyright (c) 2013 Say Goodnight Software. All rights reserved.
 //
 
-#import "SGSViewController.h"
+#import "VideoViewController.h"
 #import <AVFoundation/AVFoundation.h>
-#import "SGSImageViewCell.h"
-#import "SGSVideoPeer.h"
+#import "CollectionViewImageViewCell.h"
+#import "VideoPeer.h"
 
 #import <MultipeerConnectivity/MultipeerConnectivity.h>
 
-@interface SGSViewController () <MCNearbyServiceBrowserDelegate, MCSessionDelegate, UICollectionViewDataSource, UICollectionViewDelegate, SGSVideoPeerDelegate> {
+@interface VideoViewController () <MCNearbyServiceBrowserDelegate, MCSessionDelegate, UICollectionViewDataSource, UICollectionViewDelegate, VideoPeerDelegate> {
     MCPeerID *_myDevicePeerId;
     MCSession *_session;
     MCNearbyServiceBrowser *_browser;
@@ -65,7 +65,7 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)cv cellForItemAtIndexPath:(NSIndexPath *)indexPath;
 {
-    SGSImageViewCell *cell = [cv dequeueReusableCellWithReuseIdentifier:@"ImageViewCell" forIndexPath:indexPath];
+    CollectionViewImageViewCell *cell = [cv dequeueReusableCellWithReuseIdentifier:@"ImageViewCell" forIndexPath:indexPath];
     
     return cell;
 }
@@ -80,7 +80,7 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 NSIndexPath* indexPath = [NSIndexPath indexPathForItem:self.cellCount inSection:0];
 
-                SGSVideoPeer* newVideoPeer = [[SGSVideoPeer alloc] initWithPeer:peerID atIndexPath:indexPath];
+                VideoPeer* newVideoPeer = [[VideoPeer alloc] initWithPeer:peerID atIndexPath:indexPath];
                 newVideoPeer.delegate = self;
                 
                 _peers[peerID.displayName] = newVideoPeer;
@@ -98,7 +98,7 @@
             NSLog(@"NOT CONNECTED \n peer id: %@, session peerID: %@, state %lu",peerID.displayName,session.myPeerID.displayName,state);
             dispatch_async(dispatch_get_main_queue(), ^{
                 
-                SGSVideoPeer* peer = _peers[peerID.displayName];
+                VideoPeer* peer = _peers[peerID.displayName];
                 [peer stopPlaying];
                 peer = nil;
                 
@@ -119,7 +119,7 @@
     UIImage* image = [UIImage imageWithData:dict[@"image"] scale:2.0];
     NSNumber* framesPerSecond = dict[@"framesPerSecond"];
     
-    SGSVideoPeer* thisVideoPeer = _peers[peerID.displayName];
+    VideoPeer* thisVideoPeer = _peers[peerID.displayName];
     [thisVideoPeer addImageFrame:image withFPS:framesPerSecond];
 }
 
@@ -153,7 +153,7 @@
 
 - (void) showImage:(UIImage *)image atIndexPath:(NSIndexPath *)indexPath {
     dispatch_async(dispatch_get_main_queue(), ^{
-        SGSImageViewCell* cell = (SGSImageViewCell*) [self.collectionView cellForItemAtIndexPath:indexPath];
+        CollectionViewImageViewCell* cell = (CollectionViewImageViewCell*) [self.collectionView cellForItemAtIndexPath:indexPath];
         cell.backgroundColor = [UIColor blackColor];
 //        cell.imageView.contentMode = UIViewContentModeScaleAspectFill;
 //        [cell.imageView sizeToFit];

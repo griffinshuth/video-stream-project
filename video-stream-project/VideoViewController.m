@@ -8,7 +8,7 @@
 
 #import "VideoViewController.h"
 #import <AVFoundation/AVFoundation.h>
-#import "CustomCollectionImageViewCell.h"
+#import "CollectionViewImageViewCell.h"
 #import "VideoPeer.h"
 
 #import <MultipeerConnectivity/MultipeerConnectivity.h>
@@ -65,7 +65,7 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)cv cellForItemAtIndexPath:(NSIndexPath *)indexPath;
 {
-    CustomCollectionImageViewCell *cell = [cv dequeueReusableCellWithReuseIdentifier:@"ImageViewCell" forIndexPath:indexPath];
+    CollectionViewImageViewCell *cell = [cv dequeueReusableCellWithReuseIdentifier:@"ImageViewCell" forIndexPath:indexPath];
     
     return cell;
 }
@@ -153,7 +153,7 @@
 
 - (void) showImage:(UIImage *)image atIndexPath:(NSIndexPath *)indexPath {
     dispatch_async(dispatch_get_main_queue(), ^{
-        CustomCollectionImageViewCell* cell = (CustomCollectionImageViewCell*) [self.collectionView cellForItemAtIndexPath:indexPath];
+        CollectionViewImageViewCell* cell = (CollectionViewImageViewCell*) [self.collectionView cellForItemAtIndexPath:indexPath];
         cell.backgroundColor = [UIColor blackColor];
 //        cell.imageView.contentMode = UIViewContentModeScaleAspectFill;
 //        [cell.imageView sizeToFit];

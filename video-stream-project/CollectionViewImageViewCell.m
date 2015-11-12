@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Say Goodnight Software. All rights reserved.
 //
 
-#import "SGSImageViewCell.h"
+#import "CollectionViewImageViewCell.h"
 
-@implementation SGSImageViewCell
+@implementation CollectionViewImageViewCell
 
 - (id)initWithFrame:(CGRect)frame
 {
