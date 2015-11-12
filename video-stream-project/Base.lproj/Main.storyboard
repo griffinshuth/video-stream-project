@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Nr1-O0-wYT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Nr1-O0-wYT">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Stream View Controller-->
@@ -94,9 +94,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SLt-5l-E9v">
-                                <rect key="frame" x="20" y="64" width="560" height="536"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <animations/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="K8g-SE-t1G">
                                     <size key="itemSize" width="300" height="300"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -105,7 +105,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="ImageViewCell" id="hgE-lv-cT0" customClass="CollectionViewImageViewCell">
-                                        <rect key="frame" x="130" y="64" width="300" height="300"/>
+                                        <rect key="frame" x="150" y="64" width="300" height="300"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
@@ -153,8 +153,8 @@
                         <constraints>
                             <constraint firstItem="SLt-5l-E9v" firstAttribute="centerX" secondItem="C5h-Gx-oqm" secondAttribute="centerX" id="1Xh-ND-j5F"/>
                             <constraint firstItem="SLt-5l-E9v" firstAttribute="top" secondItem="6Yc-22-gNt" secondAttribute="bottom" id="EIa-lu-fT1"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="SLt-5l-E9v" secondAttribute="trailing" id="KIX-M9-4qn"/>
-                            <constraint firstItem="SLt-5l-E9v" firstAttribute="leading" secondItem="C5h-Gx-oqm" secondAttribute="leadingMargin" id="NMG-uw-c13"/>
+                            <constraint firstAttribute="trailing" secondItem="SLt-5l-E9v" secondAttribute="trailing" id="KIX-M9-4qn"/>
+                            <constraint firstItem="SLt-5l-E9v" firstAttribute="leading" secondItem="C5h-Gx-oqm" secondAttribute="leading" id="NMG-uw-c13"/>
                             <constraint firstItem="bxs-pI-BHG" firstAttribute="top" secondItem="SLt-5l-E9v" secondAttribute="bottom" id="zAw-Ca-xSZ"/>
                         </constraints>
                     </view>

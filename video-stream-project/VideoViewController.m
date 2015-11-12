@@ -10,7 +10,6 @@
 #import <AVFoundation/AVFoundation.h>
 #import "CollectionViewImageViewCell.h"
 #import "VideoPeer.h"
-
 #import <MultipeerConnectivity/MultipeerConnectivity.h>
 
 @interface VideoViewController () <MCNearbyServiceBrowserDelegate, MCSessionDelegate, UICollectionViewDataSource, UICollectionViewDelegate, VideoPeerDelegate> {
@@ -22,6 +21,8 @@
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (nonatomic, assign) NSInteger cellCount;
+@property (nonatomic, assign) bool allowSendingInvite;
+@property (nonatomic, strong) NSMutableSet *peersWithInvitesSent;
 
 @end
 
@@ -30,7 +31,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    self.allowSendingInvite = YES;
+    self.peersWithInvitesSent = [[NSMutableArray alloc] init];
     _peers = @{}.mutableCopy;
     
     self.cellCount = 0;
@@ -140,8 +142,18 @@
 }
 
 - (void) browser:(MCNearbyServiceBrowser *)browser foundPeer:(MCPeerID *)peerID withDiscoveryInfo:(NSDictionary *)info {
-    [browser invitePeer:peerID toSession:_session withContext:nil timeout:10];
-    [browser startBrowsingForPeers];
+    
+    bool alreadySentThisGuyOne = [self.peersWithInvitesSent containsObject:peerID.displayName];
+    if (self.allowSendingInvite || !alreadySentThisGuyOne) //will send invite if peer is new or waited x seconds below
+    {
+        [browser invitePeer:peerID toSession:_session withContext:nil timeout:0];
+        [self.peersWithInvitesSent addObject:peerID.displayName];
+        self.allowSendingInvite = NO;
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(7 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            self.allowSendingInvite = YES;
+        });
+    }
+//    [browser startBrowsingForPeers];
     NSLog(@"peer browser inviting %@",peerID.displayName);
 }
 
@@ -162,7 +174,7 @@
 //        NSString *cellSize = NSStringFromCGSize(cell.bounds.size);
 //        NSLog(@".\n image size : %@, \n intrinsic image size : %@, \n cell size %@",imageSize,intrinsicImageSize,cellSize);
 //        cell.imageView.frame = CGRectMake(0, 0, cell.bounds.size.width, cell.bounds.size.height);
-        cell.imageView.bounds = CGRectMake(0, 0, cell.bounds.size.width, cell.bounds.size.height);
+//        cell.imageView.bounds = CGRectMake(0, 0, cell.bounds.size.width, cell.bounds.size.height);
         cell.imageView.image = image;
         id i;
     });

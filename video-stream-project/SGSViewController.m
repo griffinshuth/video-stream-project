@@ -162,7 +162,7 @@
 //        NSString *cellSize = NSStringFromCGSize(cell.bounds.size);
 //        NSLog(@".\n image size : %@, \n intrinsic image size : %@, \n cell size %@",imageSize,intrinsicImageSize,cellSize);
 //        cell.imageView.frame = CGRectMake(0, 0, cell.bounds.size.width, cell.bounds.size.height);
-        cell.imageView.bounds = CGRectMake(0, 0, cell.bounds.size.width, cell.bounds.size.height);
+//        cell.imageView.bounds = CGRectMake(0, 0, cell.bound   s.size.width, cell.bounds.size.height);
         cell.imageView.image = image;
         id i;
     });
