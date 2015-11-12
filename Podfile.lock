@@ -1,0 +1,10 @@
+PODS:
+  - AVCaptureMultipeerVideoDataOutput (0.0.1)
+
+DEPENDENCIES:
+  - AVCaptureMultipeerVideoDataOutput
+
+SPEC CHECKSUMS:
+  AVCaptureMultipeerVideoDataOutput: 8ba12524b96d1129021a71112a3eceeba4859162
+
+COCOAPODS: 0.39.0

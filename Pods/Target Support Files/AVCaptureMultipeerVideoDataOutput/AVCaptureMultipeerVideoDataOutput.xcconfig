@@ -1,0 +1,5 @@
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${BUILD_DIR}" "${PODS_ROOT}/BuildHeaders" "${PODS_ROOT}/Headers/Private/AVCaptureMultipeerVideoDataOutput" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AVCaptureMultipeerVideoDataOutput"
+OTHER_LDFLAGS = -framework "AVFoundation" -weak_framework "MultipeerConnectivity"
+PODS_ROOT = ${SRCROOT}
+SKIP_INSTALL = YES
