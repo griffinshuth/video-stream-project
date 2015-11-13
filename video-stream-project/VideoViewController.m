@@ -72,6 +72,14 @@
     return cell;
 }
 
+-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    CGSize screenSize = [UIScreen mainScreen].bounds.size;
+    CGFloat width = MIN(screenSize.width, screenSize.height);
+    
+    return CGSizeMake(width, width);
+}
+
 
 #pragma mark - MCSessionDelegate Methods
 
