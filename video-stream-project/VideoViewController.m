@@ -32,7 +32,7 @@
 {
     [super viewDidLoad];
     self.allowSendingInvite = YES;
-    self.peersWithInvitesSent = [[NSMutableArray alloc] init];
+    self.peersWithInvitesSent = [[NSMutableSet alloc] init];
     _peers = @{}.mutableCopy;
     
     self.cellCount = 0;
@@ -184,7 +184,6 @@
 //        cell.imageView.frame = CGRectMake(0, 0, cell.bounds.size.width, cell.bounds.size.height);
 //        cell.imageView.bounds = CGRectMake(0, 0, cell.bounds.size.width, cell.bounds.size.height);
         cell.imageView.image = image;
-        id i;
     });
 }
 
