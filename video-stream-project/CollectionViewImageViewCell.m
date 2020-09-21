@@ -1,10 +1,3 @@
-//
-//  SGSImageViewCell.m
-//  SGSMultipeerVideoMixer
-//
-//  Created by PJ Gray on 12/30/13.
-//  Copyright (c) 2013 Say Goodnight Software. All rights reserved.
-//
 
 #import "CollectionViewImageViewCell.h"
 

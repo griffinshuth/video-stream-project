@@ -1,10 +1,4 @@
-//
-//  SGSViewController.m
-//  SGSMultipeerVideoMixer
-//
-//  Created by PJ Gray on 12/29/13.
-//  Copyright (c) 2013 Say Goodnight Software. All rights reserved.
-//
+
 
 #import "VideoViewController.h"
 #import <AVFoundation/AVFoundation.h>

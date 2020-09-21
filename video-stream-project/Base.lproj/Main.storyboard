@@ -1,11 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Nr1-O0-wYT">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Nr1-O0-wYT">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Stream View Controller-->
+        <!--Stream-->
         <scene sceneID="2Js-x2-gfH">
             <objects>
                 <viewController id="cXS-bR-WeR" customClass="StreamStartViewController" sceneMemberID="viewController">
@@ -14,12 +16,12 @@
                         <viewControllerLayoutGuide type="bottom" id="961-pZ-sSt"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="BjK-pN-RBw">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v7T-li-NJf">
                                 <rect key="frame" x="20" y="114" width="136" height="30"/>
-                                <animations/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="START STREAMING"/>
                                 <connections>
                                     <action selector="startTheStream:" destination="cXS-bR-WeR" eventType="touchUpInside" id="Ufa-Xj-RR0"/>
@@ -27,23 +29,22 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U1W-jN-Wix">
                                 <rect key="frame" x="17" y="205" width="129" height="30"/>
-                                <animations/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="STOP STREAMING"/>
                                 <connections>
                                     <action selector="stopStreamingPressed:" destination="cXS-bR-WeR" eventType="touchUpInside" id="2wj-t4-2ql"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Stream View Controller" id="rTR-Ft-ljI"/>
+                    <navigationItem key="navigationItem" title="Stream" id="rTR-Ft-ljI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Zq-lk-vTp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="833" y="354"/>
         </scene>
-        <!--View Controller Title-->
+        <!--Griffin Camera-->
         <scene sceneID="x1e-yW-UtJ">
             <objects>
                 <viewController id="ysq-hl-1Xf" sceneMemberID="viewController">
@@ -52,12 +53,12 @@
                         <viewControllerLayoutGuide type="bottom" id="YsH-ic-2OX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="xfD-mn-XPf">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G7t-sd-6cF">
                                 <rect key="frame" x="33" y="255" width="97" height="30"/>
-                                <animations/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Watch Stream"/>
                                 <connections>
                                     <segue destination="8ZX-Nh-UNN" kind="show" id="ncQ-fo-48E"/>
@@ -65,23 +66,22 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tsc-Sw-dgt">
                                 <rect key="frame" x="37" y="186" width="93" height="30"/>
-                                <animations/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Stream Video"/>
                                 <connections>
                                     <segue destination="cXS-bR-WeR" kind="show" id="ZTB-fD-3Ua"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="View Controller Title" id="mro-3y-9zD"/>
+                    <navigationItem key="navigationItem" title="Griffin Camera" id="mro-3y-9zD"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="flc-Vw-zTN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="155" y="588"/>
         </scene>
-        <!--Watching View Controller-->
+        <!--Watch stream-->
         <scene sceneID="pZK-w1-Xz0">
             <objects>
                 <viewController id="8ZX-Nh-UNN" customClass="VideoViewController" sceneMemberID="viewController">
@@ -90,13 +90,12 @@
                         <viewControllerLayoutGuide type="bottom" id="bxs-pI-BHG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="C5h-Gx-oqm">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SLt-5l-E9v">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" pagingEnabled="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SLt-5l-E9v">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="K8g-SE-t1G">
                                     <size key="itemSize" width="300" height="300"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -105,7 +104,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="ImageViewCell" id="hgE-lv-cT0" customClass="CollectionViewImageViewCell">
-                                        <rect key="frame" x="150" y="64" width="300" height="300"/>
+                                        <rect key="frame" x="150" y="0.0" width="300" height="300"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
@@ -113,15 +112,11 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vIS-50-6Q8">
                                                     <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
-                                                    <animations/>
-                                                    <color key="backgroundColor" red="0.8949850063" green="0.8949850063" blue="0.8949850063" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" red="0.8949850063" green="0.8949850063" blue="0.8949850063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </imageView>
                                             </subviews>
-                                            <animations/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <animations/>
-                                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="vIS-50-6Q8" firstAttribute="height" secondItem="hgE-lv-cT0" secondAttribute="height" id="9xi-9X-6Mz"/>
                                             <constraint firstItem="vIS-50-6Q8" firstAttribute="leading" secondItem="hgE-lv-cT0" secondAttribute="leading" id="Xyf-Cg-3s3"/>
@@ -148,8 +143,7 @@
                                 </connections>
                             </collectionView>
                         </subviews>
-                        <animations/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="SLt-5l-E9v" firstAttribute="centerX" secondItem="C5h-Gx-oqm" secondAttribute="centerX" id="1Xh-ND-j5F"/>
                             <constraint firstItem="SLt-5l-E9v" firstAttribute="top" secondItem="6Yc-22-gNt" secondAttribute="bottom" id="EIa-lu-fT1"/>
@@ -158,7 +152,7 @@
                             <constraint firstItem="bxs-pI-BHG" firstAttribute="top" secondItem="SLt-5l-E9v" secondAttribute="bottom" id="zAw-Ca-xSZ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Watching View Controller" id="sdF-lL-Mao"/>
+                    <navigationItem key="navigationItem" title="Watch stream" id="sdF-lL-Mao"/>
                     <connections>
                         <outlet property="collectionView" destination="SLt-5l-E9v" id="s5O-rS-oqG"/>
                     </connections>
@@ -172,14 +166,11 @@
             <objects>
                 <navigationController id="Nr1-O0-wYT" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jZ3-hX-DEf">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </navigationBar>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Bh4-Z6-izP">
-                        <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </toolbar>
                     <connections>
                         <segue destination="ysq-hl-1Xf" kind="relationship" relationship="rootViewController" id="pTv-Dd-Kqq"/>
